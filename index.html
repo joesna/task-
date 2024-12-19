@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "section aside"
+                "footer footer";
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #d915bc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #08c4b8;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        section {
+            grid-area: section;
+            background-color: #eaf8fc;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #f008a7;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(19, 60, 60);
+            color: rgb(138, 84, 13);
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>This is the Header</h1>
+        </header>
+        <nav>
+            <p>This is where we can find our links</p>
+        </nav>
+        <section>
+            <h2>This is a Section</h2>
+            <article>
+                <h3>Title of Article 1</h3>
+                <p>This is the content of the first article.</p>
+            </article>
+            <article>
+                <h3>Title of Article 2</h3>
+                <p>This is the content of the second article.</p>
+            </article>
+        </section>
+        <aside>
+            <h4>Side Section</h4>
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+        </aside>
+        <footer>
+            <p>&copy; 2024 My Semantic Layout</p>
+        </footer>
+    </div>
+</body>
+</html>
